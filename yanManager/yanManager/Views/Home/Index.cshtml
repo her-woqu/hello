@@ -1,0 +1,25 @@
+﻿@Model XireManager.Models.Websiteinfo
+
+@using XireManager.Models
+
+@{
+    ViewBag.Title = "主页";
+
+    var siteinfoFromViewBag = (Websiteinfo)ViewBag.Siteinfo;
+
+    var siteinfoFromViewData = (Websiteinfo)ViewData["Siteinfo"];
+    }
+<div class="content-wrapper">
+    <h1>@Model.SiteName</h1>
+    <p>@Model.CopyRight</p>
+</div>
+
+<div class="content-wrapper">
+    <h1>@siteinfoFromViewBag.SiteName</h1>
+    <p>@siteinfoFromViewBag.CopyRight</p>
+</div>
+
+<div class="content-wrapper">
+    <h1>@siteinfoFromViewData.SiteName</h1>
+    <p>@siteinfoFromViewData.CopyRight</p>
+</div>
